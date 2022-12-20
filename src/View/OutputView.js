@@ -1,6 +1,6 @@
 const { Console } = require('@woowacourse/mission-utils');
 
-const OUTPUT_MESSAGE = {};
+const OUTPUT_MESSAGE = { error: (message, name, cause) => `${name} : ${message}\n[CAUSE] : ${cause}` };
 
 const OutputView = {
   print(input) {
