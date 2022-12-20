@@ -27,6 +27,10 @@ const View = {
   printStart() {
     OutputView.print(OUTPUT_MESSAGE.start);
   },
+
+  printResult(value) {
+    OutputView.printResult(value);
+  },
 };
 
 module.exports = View;

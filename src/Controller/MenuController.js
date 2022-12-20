@@ -54,7 +54,7 @@ class MenuController {
   }
 
   #result() {
-    console.log('결과');
+    this.#view.printResult(this.#model.recommend());
   }
 
   #hasErrorOccurredByCheck(input, checkName) {

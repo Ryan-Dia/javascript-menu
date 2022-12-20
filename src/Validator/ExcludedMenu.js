@@ -1,6 +1,6 @@
 const ValidationError = require('../Error/ValidationError');
 const ERROR_MESSAGE = require('../Constants/ERROR');
-const MENU = require('../Constants/MENU');
+const { menu } = require('../Constants/MENU');
 
 class ExcludedMenu {
   #splitInput;
@@ -34,7 +34,7 @@ class ExcludedMenu {
 
   #checkValidMenu() {
     this.#splitInput.forEach((excludedMenu) => {
-      if (!MENU.includes(excludedMenu)) {
+      if (!menu.includes(excludedMenu)) {
         throw new ValidationError(ERROR_MESSAGE.excluded_menu(excludedMenu));
       }
     });
